@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VQ1 Settings Panel</title>
+    <style>
+        /* Set background to red */
+        body {
+            background-color: red;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Black panel box */
+        .panel {
+            background-color: black;
+            width: 300px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            color: white;
+        }
+
+        /* Larger text for "FROM VQ1" */
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        /* Form groups for controls */
+        .control-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        /* Range slider styling */
+        input[type="range"] {
+            width: 100%;
+        }
+
+        /* Button styling */
+        button {
+            padding: 10px 20px;
+            background-color: red; /* Default color red */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            width: 100%;
+            transition: background-color 0.3s; /* Smooth transition */
+        }
+
+        /* Change color when button is clicked (active) */
+        button.active {
+            background-color: green; /* Color when clicked */
+        }
+
+        button:hover {
+            background-color: darkred; /* Hover effect */
+        }
+
+        /* Select file styling */
+        input[type="file"] {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Panel for VQ1 settings -->
+    <div class="panel">
+        <div class="title">FROM VQ1</div> <!-- Updated title -->
+
+        <!-- Auto Lock, Speed Rock, Auto M Lock, FPS M Rock -->
+        <div class="control-group">
+            <button class="toggle-btn" id="auto-lock-btn">Auto Lock</button>
+            <button class="toggle-btn" id="speed-rock-btn">Speed Rock</button>
+            <button class="toggle-btn" id="auto-m-lock-btn">Auto M Lock</button>
+            <button class="toggle-btn" id="fps-m-rock-btn">FPS M Rock</button>
+        </div>
+
+        <!-- File select button -->
+        <div class="control-group">
+            <label for="file-upload">Select ZIP File:</label>
+            <input type="file" id="file-upload" accept=".zip">
+        </div>
+
+        <!-- Adjust X, Y Axis -->
+        <div class="control-group">
+            <label for="x-axis">X Axis:</label>
+            <input type="range" id="x-axis" min="0" max="100" value="50">
+        </div>
+        <div class="control-group">
+            <label for="y-axis">Y Axis:</label>
+            <input type="range" id="y-axis" min="0" max="100" value="50">
+        </div>
+
+        <!-- Adjust DPI -->
+        <div class="control-group">
+            <label for="dpi">Adjust DPI:</label>
+            <input type="range" id="dpi" min="100" max="2000" value="800">
+        </div>
+
+        <!-- Run Button -->
+        <button id="run-btn">Run</button>
+
+        <!-- Game Selection Buttons -->
+        <div class="control-group">
+            <button id="freefire-btn">Free Fire</button>
+            <button id="freefire-max-btn">Free Fire Max</button>
+        </div>
+    </div>
+
+    <script>
+        // Function to toggle button color when clicked
+        const buttons = document.querySelectorAll('.toggle-btn');
+        
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Toggle 'active' class to change the background color
+                button.classList.toggle('active');
+            });
+        });
+
+        // Auto Lock, Speed Rock, Auto M Lock, FPS M Rock
+        document.getElementById("auto-lock-btn").onclick = function() {
+            alert("Auto Lock is enabled.");
+        };
+        document.getElementById("speed-rock-btn").onclick = function() {
+            alert("Speed Rock is enabled.");
+        };
+        document.getElementById("auto-m-lock-btn").onclick = function() {
+            alert("Auto M Lock is enabled.");
+        };
+        document.getElementById("fps-m-rock-btn").onclick = function() {
+            alert("FPS M Rock is enabled.");
+        };
+
+        // File upload functionality (only accepts .zip files)
+        document.getElementById("file-upload").onchange = function(event) {
+            const file = event.target.files[0];
+            if (file && file.name.endsWith(".zip")) {
+                alert(`You have selected the file: ${file.name}`);
+            } else {
+                alert("Please select a valid ZIP file.");
+            }
+        };
+
+        // X, Y Axis and DPI adjustment functionality
+        const xAxis = document.getElementById("x-axis");
+        const yAxis = document.getElementById("y-axis");
+        const dpi = document.getElementById("dpi");
+
+        // Show current values of X, Y, and DPI
+        xAxis.addEventListener('input', function() {
+            console.log(`X Axis: ${xAxis.value}`);
+        });
+        yAxis.addEventListener('input', function() {
+            console.log(`Y Axis: ${yAxis.value}`);
+        });
+        dpi.addEventListener('input', function() {
+            console.log(`DPI: ${dpi.value}`);
+        });
+
+        // Run button functionality
+        document.getElementById("run-btn").onclick = function() {
+            alert("Entering game...");
+        };
+
+        // Free Fire and Free Fire Max buttons - link to Play Store
+        document.getElementById("freefire-btn").onclick = function() {
+            window.location.href = "https://play.google.com/store/apps/details?id=com.dts.freefireth"; // Free Fire link
+        };
+        document.getElementById("freefire-max-btn").onclick = function() {
+            window.location.href = "https://play.google.com/store/apps/details?id=com.dts.freefiremax"; // Free Fire Max link
+        };
+    </script>
+
+</body>
+  </html>
