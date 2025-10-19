@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<apns version="8">
+    <apn carrier="BNG"
+        mcc="510"
+        mnc="01"
+        apn="web.noverca.it"
+        type="default,supl"
+        protocol="IPV4"
+        roaming_protocol="IP"
+    />
+
+        <apn carrier="BNG"
+        mcc="510"
+        mnc="03"
+        apn="web.noverca.it"
+        type="default,supl"
+        protocol="IPV4"
+        roaming_protocol="IP"
+    />
+
+        <apn carrier="BNG"
+        mcc="510"
+        mnc="07"
+        apn="web.noverca.it"
+        type="default,supl"
+        protocol="IPV4"
+        roaming_protocol="IP"
+    />
+
+        <apn carrier="BNG"
+        mcc="510"
+        mnc="08"
+        apn="web.noverca.it"
+        type="default,supl"
+        protocol="IPV4"
+        roaming_protocol="IP"
+    />
+
+        <apn carrier="BNG"
+        mcc="510"
+        mnc="09"
+        apn="web.noverca.it"
+        type="default,supl"
+        protocol="IPV4"
+        roaming_protocol="IP"
+    />
+
+        <apn carrier="BNG"
+        mcc="510"
+        mnc="010"
+        apn="web.noverca.it"
+        type="default,supl"
+        protocol="IPV4"
+        roaming_protocol="IP"
+    />
+
+        <apn carrier="BNG"
+        mcc="510"
+        mnc="011"
+        apn="web.noverca.it"
+        type="default,supl"
+        protocol="IPV4"
+        roaming_protocol="IP"
+    />
+
+        <apn carrier="BNG"
+        mcc="510"
+        mnc="020"
+        apn="web.noverca.it"
+        type="default,supl"
+        protocol="IPV4"
+        roaming_protocol="IP"
+    />
+
+        <apn carrier="BNG"
+        mcc="510"
+        mnc="021"
+        apn="web.noverca.it"
+        type="default,supl"
+        protocol="IPV4"
+        roaming_protocol="IP"
+    />
+
+        <apn carrier="BNG"
+        mcc="510"
+        mnc="089"
+        apn="web.noverca.it"
+        type="default,supl"
+        protocol="IPV4"
+        roaming_protocol="IP"
+    />
+</apns>
